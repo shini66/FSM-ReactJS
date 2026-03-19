@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Globals: keep full-height layout and sensible defaults */
+html, body, #root { height: 100%; }
+body {
+	@apply min-w-[320px] w-full min-h-screen flex flex-col;
+	margin: 0;
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Small helper: main heading sizing (can be overridden with utilities) */
+h1 { @apply text-4xl leading-tight }
+
+/* Buttons: sensible default, still prefer utility classes in components */
+button {
+	@apply rounded-md border-transparent px-4 py-2 text-base font-medium bg-neutral-900 text-white;
+}
+button:hover { @apply ring-1 ring-indigo-400 }
+
+@media (prefers-color-scheme: light) {
+	:root { color-scheme: light }
+}
