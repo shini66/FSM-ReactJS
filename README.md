@@ -1,18 +1,77 @@
-# React + Vite
+# FSM-ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto de ejemplo construido con React + Vite. Contiene una estructura mínima pero organizada para trabajar con componentes, hooks y servicios, además de integrar Tailwind CSS y configuración básica de ESLint y PostCSS.
 
-Currently, two official plugins are available:
+**Descripción breve:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositorio es una plantilla/ejemplo para aprender y desarrollar aplicaciones React modernas con Vite como bundler. Incluye una estructura de carpetas pensada para separar componentes UI, páginas, hooks reutilizables y servicios (API), lo que facilita escalar y mantener el código.
 
-## React Compiler
+**Por qué esta estructura:**
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- `src/components/`: componentes reutilizables y subcarpetas de UI (botones, nav, footer).
+- `src/hooks/`: hooks personalizados para lógica reutilizable (estado, efectos, FSM, etc.).
+- `src/page/`: vistas o páginas principales de la app.
+- `src/services/`: capa para llamadas a APIs y lógica de acceso a datos.
+- `public/` y `src/assets/`: archivos estáticos y recursos.
 
-Note: This will impact Vite dev & build performances.
+**Tecnologías principales:**
 
-## Expanding the ESLint configuration
+- **React**: biblioteca UI.
+- **Vite**: construcción y servidor de desarrollo rápido.
+- **Tailwind CSS**: utilidades CSS para estilos.
+- **PostCSS**: procesamiento de CSS (configuración con Tailwind).
+- **ESLint**: reglas de linting (configuración mínima incluida).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Requisitos
+
+- Node.js 16 o superior (recomendado LTS).
+- npm, yarn o pnpm como gestor de paquetes.
+- Sistema operativo: Windows/macOS/Linux (multiplataforma).
+
+## Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/shini66/FSM-ReactJS
+cd FSM-ReactJS
+```
+
+2. Instala dependencias:
+
+```bash
+npm install
+# o
+# yarn install
+# o
+# pnpm install
+```
+
+3. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+4. Build de producción:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Comandos útiles
+
+- `npm run dev` — Inicia servidor de desarrollo con HMR.
+- `npm run build` — Genera la versión de producción en `dist/`.
+- `npm run preview` — Sirve la build para pruebas locales.
+- `npm test` — (Si se añade) correrá los tests.
+
+## Notas y buenas prácticas
+
+- Mantén los componentes pequeños y enfocados: un componente = una responsabilidad.
+- Usa `src/services/` para centralizar llamadas HTTP y abstracciones de datos.
+- Coloca la lógica compartida en `src/hooks/` para facilitar pruebas y reutilización.
+- La configuración incluida (Tailwind, PostCSS, ESLint) está pensada para empezar rápido; ajústala según necesidades del proyecto.
+
+Si quieres, puedo añadir secciones de ejemplo (cómo crear un componente, un hook o integrar una API) o traducir esto a inglés.
