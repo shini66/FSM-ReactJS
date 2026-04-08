@@ -27,7 +27,7 @@ function LoginForm() {
     console.log("Login:", { email, password });
 
     if(email === "example@example.com" && password === "password") {
-      navigate("/home");
+      navigate("/");
     }else{
       setError("Credenciales incorrectas");
     }
