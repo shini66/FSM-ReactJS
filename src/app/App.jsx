@@ -1,13 +1,7 @@
-import ListaDeUsuarios from '@/components/UserList.jsx'
-import UserForm from './components/UserFrom'
-import RoutesApp from './routes.jsx';
-
+import RoutesApp from "./routes.jsx";
 
 function App() {
-
-  return (
-    <RoutesApp />
-  )
+  return <RoutesApp />;
 }
 
 //function App() {
@@ -20,4 +14,4 @@ function App() {
 //  )
 //}
 
-export default App
+export default App;
