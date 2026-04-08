@@ -1,6 +1,5 @@
 import ListaDeUsuarios from '@/components/UserList.jsx'
 import UserForm from './components/UserFrom'
-import ContadorReducer from './components/Example2.jsx';
 import RoutesApp from './routes.jsx';
 
 
