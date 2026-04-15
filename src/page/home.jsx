@@ -1,4 +1,5 @@
 import { useState } from "react";
+import UserList from "@/components/UserList.jsx";
 
 function HomePage() {
   const [showContent, setShowContent] = useState(false);
@@ -23,6 +24,7 @@ function HomePage() {
         <p className="text-lg text-gray-700">
           Esta es la página principal de nuestro sitio web.
         </p>
+        <UserList />
       </div>
     </div>
   );
