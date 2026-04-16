@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import UserCard from '@/components/UserCard.jsx'
 import UserForm from './UserFrom';
-import { apiUserList } from '../api/apiFetch';
+import { apiUserList } from '../api/apiAxios';
 
 function ListaDeUsuarios() {
   const [users, setUsers] = useState([]);

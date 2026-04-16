@@ -6,10 +6,11 @@ import {
 } from "react-router-dom";
 import Footer from "@/components/UI/Footer.jsx";
 import Nav from "@/components/UI/Nav.jsx";
-import AboutPage from "@/page/about.jsx";   
+import AboutPage from "@/page/about.jsx";
 import ContactPage from "@/page/contact.jsx";
 import HomePage from "@/page/home.jsx";
 import LoginPage from "@/page/login.jsx";
+import PostsPage from "@/page/posts.jsx";
 
 function RoutesApp() {
   return (
@@ -31,6 +32,7 @@ function AppRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/posts" element={<PostsPage />} />
         </Routes>
       </main>
       {location.pathname !== "/login" && <Footer />}

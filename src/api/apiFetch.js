@@ -1,6 +1,8 @@
+const URL = import.meta.env.VITE_API_URL || 'https://jsonplaceholder.typicode.com';
+
 async function apiUserList() {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const response = await fetch(`${URL}/users`);
         if(!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -13,7 +15,7 @@ async function apiUserList() {
 
 async function apiPostList() {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const response = await fetch(`${URL}/posts`);
         if(!response.ok) {
             throw new Error('Network response was not ok');
         }
