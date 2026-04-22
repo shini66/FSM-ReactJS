@@ -75,3 +75,27 @@ npm run preview
 - La configuración incluida (Tailwind, PostCSS, ESLint) está pensada para empezar rápido; ajústala según necesidades del proyecto.
 
 Si quieres, puedo añadir secciones de ejemplo (cómo crear un componente, un hook o integrar una API) o traducir esto a inglés.
+
+## Variables de entorno
+
+La aplicación carga variables de entorno usando el sistema de Vite. Para que Vite exponga las variables en `import.meta.env` deben:
+
+- Estar definidas en un archivo `.env` en la raíz del proyecto (misma carpeta que `vite.config.js`).
+- Tener el prefijo `VITE_` (obligatorio). Ejemplo mínimo:
+
+```env
+VITE_API_URL=https://pokeapi.co/api/v2
+```
+
+También podés usar `.env.local` o `.env.development` según el entorno.
+
+Si cambiás o creás `.env`, reiniciá el servidor de desarrollo con:
+
+```bash
+npm run dev
+```
+
+### Dónde se usan las variables
+
+- El helper HTTP está en `src/helpers/api.js` y usa `import.meta.env.VITE_API_URL` como `baseURL` por defecto. Cambialo según necesites.
+

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Button from "./UI/Button";
+import { useState } from "react";
+import Button from "../UI/Button";
 
 function UserForm({ onSaveUserData }) {
   const [name, setName] = useState("");
@@ -19,7 +19,10 @@ function UserForm({ onSaveUserData }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-200 p-4 rounded text-black">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-gray-200 p-4 rounded text-black"
+    >
       <div className="mb-4">
         <label className="block text-gray-700 mb-2">Nombre:</label>
         <input
@@ -47,7 +50,11 @@ function UserForm({ onSaveUserData }) {
           className="w-full p-2 border border-gray-300 rounded"
         />
       </div>
-      <Button type="submit" className="bg-blue-500 text-white p-2 rounded" name="Enviar" />
+      <Button
+        type="submit"
+        className="bg-blue-500 text-white p-2 rounded"
+        name="Enviar"
+      />
     </form>
   );
 }
